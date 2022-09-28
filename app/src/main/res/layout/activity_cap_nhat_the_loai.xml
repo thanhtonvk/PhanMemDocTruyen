@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Admin.QuanLyTheLoai.CapNhatTheLoaiActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên thể loại" />
+
+            <EditText
+                android:id="@+id/edt_ten_the_loai"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nhập tên thể loại" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hình ảnh" />
+
+            <EditText
+                android:id="@+id/edt_hinh_anh"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Link ảnh" />
+
+            <Button
+                android:id="@+id/btn_them"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Cập nhật" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
