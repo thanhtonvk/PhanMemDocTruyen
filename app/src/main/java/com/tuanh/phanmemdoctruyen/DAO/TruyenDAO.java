@@ -3,7 +3,6 @@ package com.tuanh.phanmemdoctruyen.DAO;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 
 import com.tuanh.phanmemdoctruyen.Models.TapTruyen;
 import com.tuanh.phanmemdoctruyen.Models.TheLoai;
@@ -50,6 +49,7 @@ public class TruyenDAO {
             theLoaiList.add(theLoai);
             cursor.moveToNext();
         }
+        cursor.close();
         return theLoaiList;
     }
 
@@ -63,7 +63,25 @@ public class TruyenDAO {
             tapTruyenList.add(tapTruyen);
             cursor.moveToNext();
         }
+        cursor.close();
         return tapTruyenList;
+    }
+
+
+    public List<Truyen> dsTruyenTheoLoai(int maLoai) {
+        String query = "select Truyen.maTruyen,tenTruyen,tacGia,namSangTac, moTa,hinhAnh from Truyen,CTTruyen where Truyen.maTruyen = CTTruyen.maTruyen and CTTruyen.maLoai = " + maLoai;
+        Cursor cursor = dbHelper.rawQuery(query);
+        cursor.moveToFirst();
+        List<Truyen> truyenList = new ArrayList<>();
+        while (!cursor.isAfterLast()) {
+            Truyen truyen = new Truyen(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
+            truyen.setTheLoaiList(dsTheLoaiCuaTruyen(truyen.getMaTruyen()));
+            truyen.setTapTruyenList(dsTapTruyen(truyen.getMaTruyen()));
+            truyenList.add(truyen);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return truyenList;
     }
 
 
@@ -79,6 +97,7 @@ public class TruyenDAO {
             truyenList.add(truyen);
             cursor.moveToNext();
         }
+        cursor.close();
         return truyenList;
     }
 

@@ -29,6 +29,27 @@
         <entry key="..\:/Android/PhanMemDocTruyen/app/src/main/res/layout/item_the_loai.xml" value="0.371875" />
         <entry key="..\:/Android/PhanMemDocTruyen/app/src/main/res/layout/item_the_loai_mini.xml" value="0.5" />
         <entry key="..\:/Android/PhanMemDocTruyen/app/src/main/res/layout/item_truyen.xml" value="0.33" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_admin.xml" value="0.23958333333333334" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_cap_nhat_tap_truyen.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_cap_nhat_the_loai.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_cap_nhat_truyen.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_chi_tiet_truyen.xml" value="0.16" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_dang_ky.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_danh_sach_truyen.xml" value="0.19166666666666668" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_doc_truyen.xml" value="0.22" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_main.xml" value="0.23958333333333334" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_quan_ly_tap_truyen.xml" value="0.19166666666666668" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_thu_vien.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/activity_trang_chu.xml" value="0.18" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/fragment_quan_ly_thu_vien.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/item_list_truyen.xml" value="0.30427350427350425" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/item_tap_truyen.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/item_the_loai.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/item_the_loai_mini.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/item_truyen.xml" value="0.371875" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/layout/nav_header_nguoi_dung.xml" value="0.19166666666666668" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/menu/activity_main_drawer.xml" value="0.19166666666666668" />
+        <entry key="..\:/LamThue/PhanMemDocTruyen/app/src/main/res/menu/nguoi_dung.xml" value="0.19166666666666668" />
       </map>
     </option>
   </component>

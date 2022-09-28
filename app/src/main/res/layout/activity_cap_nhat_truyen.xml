@@ -25,7 +25,7 @@
             <EditText
                 android:id="@+id/edt_ten_truyen"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:hint="Nhập tên truyện" />
 
             <TextView
@@ -36,7 +36,7 @@
             <EditText
                 android:id="@+id/edt_tac_gia"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:hint="Nhập tác giả" />
 
             <TextView
@@ -47,7 +47,7 @@
             <EditText
                 android:id="@+id/edt_nam_sang_tac"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:hint="Nhập năm sáng tác"
                 android:inputType="number" />
 
@@ -73,7 +73,7 @@
             <EditText
                 android:id="@+id/edt_hinh_anh"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:hint="Link ảnh" />
 
             <Button

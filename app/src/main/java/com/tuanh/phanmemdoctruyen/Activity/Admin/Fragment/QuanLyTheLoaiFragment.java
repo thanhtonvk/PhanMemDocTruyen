@@ -3,30 +3,27 @@ package com.tuanh.phanmemdoctruyen.Activity.Admin.Fragment;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.tuanh.phanmemdoctruyen.Activity.Admin.QuanLyTheLoai.TheLoaiAdapter;
 import com.tuanh.phanmemdoctruyen.Activity.Admin.QuanLyTheLoai.ThemTheLoaiActivity;
 import com.tuanh.phanmemdoctruyen.DAO.TheLoaiDAO;
 import com.tuanh.phanmemdoctruyen.Models.TheLoai;
-import com.tuanh.phanmemdoctruyen.Models.Truyen;
 import com.tuanh.phanmemdoctruyen.R;
 
 import java.util.List;
@@ -60,6 +57,7 @@ public class QuanLyTheLoaiFragment extends Fragment {
     private void anhXa(View view) {
         btnThem = view.findViewById(R.id.btn_them);
         rcvTheLoai = view.findViewById(R.id.rcv_the_loai);
+        rcvTheLoai.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         theLoaiDAO = new TheLoaiDAO(getContext());
         theLoaiList = theLoaiDAO.dsLoai();
         adapter = new TheLoaiAdapter(getContext(), theLoaiList);
@@ -116,7 +114,7 @@ public class QuanLyTheLoaiFragment extends Fragment {
 
     private List<TheLoai> timKiem(String tuKhoa) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return theLoaiList.stream().filter(theLoai -> theLoai.getTenLoai().contains(tuKhoa)).collect(Collectors.toList());
+            return theLoaiList.stream().filter(theLoai -> theLoai.getTenLoai().toLowerCase().contains(tuKhoa.toLowerCase())).collect(Collectors.toList());
         }
         return theLoaiList;
     }

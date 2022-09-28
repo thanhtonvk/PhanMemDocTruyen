@@ -46,7 +46,9 @@ public class TheLoaiDAO {
             theLoaiList.add(theLoai);
             cursor.moveToNext();
         }
+        cursor.close();
         return theLoaiList;
     }
+
 
 }

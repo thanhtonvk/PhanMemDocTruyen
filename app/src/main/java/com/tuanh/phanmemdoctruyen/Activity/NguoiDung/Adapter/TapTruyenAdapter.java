@@ -1,8 +1,6 @@
-package com.tuanh.phanmemdoctruyen.Activity.Admin.QuanLyTruyen.QuanLyTap;
+package com.tuanh.phanmemdoctruyen.Activity.NguoiDung.Adapter;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tuanh.phanmemdoctruyen.Activity.NguoiDung.DocTruyenActivity;
 import com.tuanh.phanmemdoctruyen.DAO.TapTruyenDAO;
 import com.tuanh.phanmemdoctruyen.Models.TapTruyen;
 import com.tuanh.phanmemdoctruyen.R;
@@ -34,7 +33,7 @@ public class TapTruyenAdapter extends RecyclerView.Adapter<TapTruyenAdapter.View
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.item_tap_truyen, parent, false);
-        return new ViewHolder(view);
+        return new TapTruyenAdapter.ViewHolder(view);
     }
 
     @Override
@@ -49,36 +48,10 @@ public class TapTruyenAdapter extends RecyclerView.Adapter<TapTruyenAdapter.View
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog(tapTruyen);
+                TapTruyen.TAPHIENTAI = holder.getAdapterPosition();
+                context.startActivity(new Intent(context, DocTruyenActivity.class));
             }
         });
-
-    }
-
-    private void dialog(TapTruyen truyen) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Tùy chọn");
-        builder.setPositiveButton("Sửa", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                TapTruyen.TAP_TRUYEN = truyen;
-                context.startActivity(new Intent(context, CapNhatTapTruyenActivity.class));
-            }
-        });
-        builder.setNegativeButton("Xóa", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                tapTruyenDAO.xoaTapTruyen(truyen.getMaTap());
-                notifyDataSetChanged();
-            }
-        });
-        builder.setNeutralButton("Hủy", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        });
-        builder.show();
     }
 
 

@@ -34,6 +34,7 @@ public class TaiKhoanDAO {
             result = new TaiKhoan(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
             cursor.moveToNext();
         }
+        cursor.close();
         return result;
     }
 }

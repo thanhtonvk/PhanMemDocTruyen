@@ -10,7 +10,7 @@ public class TapTruyen {
             "tenTap ntext," +
             "noiDung ntext," +
             "maTruyen INTEGER not null)";
-
+    public static int TAPHIENTAI;
     public TapTruyen(String tenTap, String noiDung) {
         this.tenTap = tenTap;
         this.noiDung = noiDung;

@@ -11,6 +11,7 @@ public class Truyen {
     private List<TapTruyen> tapTruyenList;
 
     public static Truyen TRUYEN;
+
     public static String TABLE_TRUYEN = "create table Truyen(" +
             "maTruyen integer primary key AUTOINCREMENT," +
             "tenTruyen ntext," +

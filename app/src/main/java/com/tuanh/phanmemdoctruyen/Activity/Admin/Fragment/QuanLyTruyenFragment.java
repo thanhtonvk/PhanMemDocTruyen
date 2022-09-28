@@ -119,7 +119,7 @@ public class QuanLyTruyenFragment extends Fragment {
 
     private List<Truyen> timKiem(String tuKhoa) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return truyenList.stream().filter(theLoai -> theLoai.getTenTruyen().contains(tuKhoa)).collect(Collectors.toList());
+            return truyenList.stream().filter(theLoai -> theLoai.getTenTruyen().toLowerCase().contains(tuKhoa.toLowerCase())).collect(Collectors.toList());
         }
         return truyenList;
     }

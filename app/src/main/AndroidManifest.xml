@@ -14,31 +14,50 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PhanMemDocTruyen"
+        android:theme="@style/Theme.Material3.DayNight"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.NguoiDung.ThuVienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NguoiDung.DocTruyenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NguoiDung.DanhSachTruyenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NguoiDung.ChiTietTruyenActivity"
+            android:exported="false"
+            android:label="Thông tin truyện" />
+        <activity
             android:name=".Activity.NguoiDung.TrangChuActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label="Trang chủ" />
         <activity
             android:name=".Activity.Admin.QuanLyTruyen.QuanLyTap.CapNhatTapTruyenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Cập nhật" />
         <activity
             android:name=".Activity.Admin.QuanLyTruyen.QuanLyTap.ThemTapTruyenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Thêm" />
         <activity
             android:name=".Activity.Admin.QuanLyTruyen.QuanLyTap.QuanLyTapTruyenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Quản lý tập truyện" />
         <activity
             android:name=".Activity.Admin.QuanLyTheLoai.CapNhatTheLoaiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Cập nhật" />
         <activity
             android:name=".Activity.Admin.QuanLyTruyen.CapNhatTruyenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Cập nhật" />
         <activity
             android:name=".Activity.Admin.QuanLyTheLoai.ThemTheLoaiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Thêm" />
         <activity
             android:name=".Activity.Admin.QuanLyTruyen.ThemTruyenActivity"
             android:exported="false"
@@ -46,19 +65,19 @@
         <activity
             android:name=".Activity.Admin.TrangQuanTriActivity"
             android:exported="false"
-            android:label="Trang quản trị"
-            android:theme="@style/Theme.PhanMemDocTruyen.NoActionBar" />
+            android:label="Trang quản trị" />
         <activity
             android:name=".Activity.Admin.AdminActivity"
             android:exported="false"
-            android:label="@string/title_activity_admin"
-            android:theme="@style/Theme.PhanMemDocTruyen.NoActionBar" />
+            android:label="Trang quản trị" />
         <activity
             android:name=".DangKyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Đăng ký" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Đăng nhập">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

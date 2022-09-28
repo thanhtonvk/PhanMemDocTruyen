@@ -55,6 +55,7 @@ public class TapTruyenDAO {
             tapTruyenList.add(tapTruyen);
             cursor.moveToNext();
         }
+        cursor.close();
         return tapTruyenList;
     }
 }
